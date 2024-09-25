@@ -10,8 +10,13 @@ import Login from '@pages/auth/login'
 
 //Home Page
 import Home from '@pages/home'
+
+//Admin Page
 import Apartment from '@pages/admin/apartment'
+
+//User Page
 import Package from '@pages/user/package'
+import Report from '@pages/user/report'
 
 //Error page
 import NotFound from '@pages/404'
@@ -50,6 +55,16 @@ export const route = createBrowserRouter([
                   {
                     path: ':id',
                     element: <Package />,
+                  },
+                ],
+              },
+              {
+                path: '/report',
+                element: <Report />,
+                children: [
+                  {
+                    path: ':id',
+                    element: <Report />,
                   },
                 ],
               },
