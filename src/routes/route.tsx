@@ -46,6 +46,12 @@ export const route = createBrowserRouter([
               {
                 path: '/package',
                 element: <Package />,
+                children: [
+                  {
+                    path: ':id',
+                    element: <Package />,
+                  },
+                ],
               },
             ],
           },

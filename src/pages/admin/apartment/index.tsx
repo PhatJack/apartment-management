@@ -53,12 +53,12 @@ const Index = () => {
         <div className="bg-white w-full h-full rounded-md p-4">
           {!params.id && (
             <>
-              <section className="w-full flex justify-between items-center">
-                <div className="w-fit rounded-md flex bg-zinc-200 overflow-hidden">
+              <section className="w-full flex flex-col sm:flex-row sm:gap-0 gap-4	 justify-between items-center">
+                <div className="w-full sm:w-fit rounded-md flex bg-zinc-200 overflow-hidden">
                   {Array.from({ length: 3 }).map((_, index) => (
                     <div
                       key={index}
-                      className="font-medium px-4 py-2 bg-transparent hover:bg-primary transition-all cursor-pointer">
+                      className="w-full text-nowrap sm:w-[120px] font-medium px-4 py-2 bg-transparent hover:bg-primary transition-all cursor-pointer">
                       Block {String.fromCharCode(65 + index)}
                     </div>
                   ))}

@@ -16,6 +16,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from '@/components/ui/tooltip'
+import Logo from '@/assets/logo.svg'
 
 interface MobileMenuProps {
   sidebar: SideBarProps[]
@@ -34,9 +35,9 @@ export default function MobileMenu({ sidebar }: MobileMenuProps) {
       <SheetContent side={'left'}>
         <div className="w-full h-full flex flex-col gap-2">
           <SheetHeader>
-            <div className="w-fit sm:w-full h-[150px] sm:h-[150px] sm:p-3 sm:order-none order-2">
+            <div className="w-fit sm:w-full h-[80px] sm:p-3 sm:order-none order-2">
               <img
-                src="https://logos-world.net/wp-content/uploads/2021/03/Lamborghini-Logo.png"
+                src={Logo}
                 alt="Logo website"
                 className="w-full h-full object-contain aspect-square"
               />
@@ -51,7 +52,10 @@ export default function MobileMenu({ sidebar }: MobileMenuProps) {
                   variant={'ghost'}
                   size={'lg'}
                   className={`gap-2 justify-start px-2 ${
-                    location.pathname == sideBar.to && 'bg-primary'
+                    (sideBar.to === '/'
+                      ? location.pathname === '/'
+                      : location.pathname.startsWith(sideBar.to)) &&
+                    'bg-primary'
                   }`}>
                   <Link to={sideBar.to}>
                     {sideBar.icon}

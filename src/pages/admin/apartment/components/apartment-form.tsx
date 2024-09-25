@@ -33,7 +33,7 @@ const ApartmentForm = ({ textTrigger }: ApartmentFormProps) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant={'default'} size={'lg'}>
+        <Button className='w-full sm:w-fit' variant={'default'} size={'lg'}>
           {textTrigger}
         </Button>
       </DialogTrigger>

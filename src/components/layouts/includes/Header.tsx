@@ -19,7 +19,7 @@ import {
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useWindowSize } from 'usehooks-ts'
 import MobileMenu from './components/MobileMenu'
-
+import Logo from '@/assets/logo.svg'
 export interface SideBarProps {
   label: string
   icon: React.ReactNode
@@ -72,13 +72,13 @@ const Header = () => {
   ]
 
   return (
-    <header className="w-full h-20 sm:h-screen sm:w-[300px] sticky top-0 z-40 flex sm:flex-row flex-col">
-      <div className="w-full h-full flex sm:flex-col flex-row sm:items-stretch items-center sm:justify-start justify-between sm:p-0 px-6 py-4">
+    <header className="w-full h-20 sm:h-screen sm:w-[300px] sticky top-0 z-40 flex sm:flex-row flex-col bg-white">
+      <div className="w-full h-full flex sm:flex-col flex-row sm:items-stretch items-center sm:justify-start justify-between sm:p-0 p-4">
         <div className="sm:w-full h-full sm:h-[150px] sm:p-3 sm:order-none order-2">
           <img
-            src="https://logos-world.net/wp-content/uploads/2021/03/Lamborghini-Logo.png"
+            src={Logo}
             alt="Logo website"
-            className="w-full h-full object-cover aspect-square"
+            className="w-full h-full object-contain aspect-square"
           />
         </div>
         {width <= 640 && <MobileMenu sidebar={userSideBars} />}
