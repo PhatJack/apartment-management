@@ -33,6 +33,19 @@
 		--ring: 0 0% 76%;
 
 		--radius: 0.5rem;
+
+		--success: 143 85% 96%;
+		--success-border: 145 92% 91%;
+		--success-foreground: 140 100% 27%;
+
+		--warning: 49 100% 97%;
+		--warning-border: 49 91% 91%;
+		--warning-foreground: 31 92% 45%;
+
+		--info: 208 100% 97%;
+		--info-border: 221 91% 91%;
+		--info-foreground: 210 92% 45%;
+
 	}
 
 	.dark {

@@ -4,11 +4,9 @@
 
 
 ## UI Page
-
 - Login 
-- Profile (Hồ sơ)
-  - Change password, avatar (Thay đổi mật khẩu, avatar)
-  - Edit user information (Thay đổi thông tin người dùng)
+- Profile Page
+- 
 
 
 ## Prerequisites

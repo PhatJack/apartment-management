@@ -1,3 +1,4 @@
+import { Badge } from '@/components/ui/badge'
 import {
   Table,
   TableBody,
@@ -18,7 +19,7 @@ const UserList = ({ users }: UserListProps) => {
       <TableHeader>
         <TableRow>
           <TableHead className="">ID</TableHead>
-          <TableHead className="w-1/2">Username - Apartment</TableHead>
+          <TableHead className="sm:w-1/2">Username - Apartment</TableHead>
           <TableHead>Phone</TableHead>
           <TableHead>Account Type</TableHead>
           <TableHead>Status</TableHead>
@@ -33,7 +34,7 @@ const UserList = ({ users }: UserListProps) => {
                 <img
                   src={user.avatar}
                   alt="user avatar"
-                  className="size-12 rounded-full object-cover"
+                  className="size-12 rounded-full object-cover hidden sm:inline-block"
                 />
                 <div className="flex flex-col">
                   <p className="">{user.name}</p>
@@ -41,9 +42,18 @@ const UserList = ({ users }: UserListProps) => {
                 </div>
               </div>
             </TableCell>
-            <TableCell>{user.phoneNumber.slice(0,-4) + '****'}</TableCell>
-            <TableCell className={`${user.type === 'OWNER' ? 'text-green-500' : 'text-blue-500'}`}>
-              {user.type}
+            <TableCell>{user.phoneNumber.slice(0, -4) + '****'}</TableCell>
+            <TableCell>
+              <Badge
+                variant={`${
+                  user.type === 'OWNER'
+                    ? 'success'
+                    : user.type === 'RESIDENT'
+                    ? 'info'
+                    : 'destructive'
+                }`}>
+                {user.type}
+              </Badge>
             </TableCell>
             <TableCell>{user.status}</TableCell>
           </TableRow>
