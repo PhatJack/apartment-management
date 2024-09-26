@@ -13,6 +13,7 @@ import Home from '@pages/home'
 
 //Admin Page
 import Apartment from '@admin/apartment'
+import User from '@admin/user'
 
 //User Page
 import Package from '@user/package'
@@ -65,6 +66,16 @@ export const route = createBrowserRouter([
                   {
                     path: ':id',
                     element: <Report />,
+                  },
+                ],
+              },
+              {
+                path: '/user',
+                element: <User />,
+                children: [
+                  {
+                    path: ':id',
+                    element: <User />,
                   },
                 ],
               },

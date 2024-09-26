@@ -15,6 +15,7 @@ import {
   Package,
   Receipt,
   TableCellsMerge,
+	UsersRound,
 } from 'lucide-react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useWindowSize } from 'usehooks-ts'
@@ -69,6 +70,12 @@ const Header = () => {
       to: '/bill',
       role: ['OWNER', 'RESIDENT'],
     },
+		{
+			label: 'User',
+			icon: <UsersRound />,
+			to: '/user',
+			role: ['ADMIN'],
+		}
   ]
 
   return (
