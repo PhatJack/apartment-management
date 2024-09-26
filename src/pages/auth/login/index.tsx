@@ -19,7 +19,8 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { toast } from 'sonner'
 import { useLoginMutation } from '@/features/auth/authSlice'
 import { useDocumentTitle } from 'usehooks-ts'
-
+import Logo from '@/assets/logo.svg'
+import Overlay from '@components/overlay/Overlay'
 export default function Index() {
   useDocumentTitle('Login')
 
@@ -59,6 +60,7 @@ export default function Index() {
 
   return (
     <>
+      <img src={Logo} alt="logo" className="size-24 absolute top-10 left-10" />
       <div className="mx-auto grid min-[400px]:w-[350px] gap-6 animate-in zoom-in-90 opacity-90">
         <div className="grid gap-2 text-center">
           <h1 className="text-3xl font-bold">Login</h1>
@@ -112,13 +114,21 @@ export default function Index() {
           </form>
         </Form>
       </div>
-      <div className="size-full fixed inset-0 bg-black/50">
-        <div className="size-full flex justify-center items-center">
-					<div className="w-[400px] h-[500px] bg-white rounded-md">
-
-					</div>
-				</div>
-      </div>
+      {/* <Overlay>
+        <div className="w-[500px] h-[400px] bg-white rounded-md p-4 flex flex-col justify-center items-center gap-2.5">
+          <img src={Logo} alt="logo" className="size-24" />
+          <p className="text-2xl font-medium">Welcome back, {'{ name }'}</p>
+          <p className="font-medium">Select your account</p>
+          <div className="w-full flex justify-center items-center gap-6 mt-4">
+            <Button className="size-32 border-2 text-lg" variant={'ghost'}>
+              Owner
+            </Button>
+            <Button className="size-32 border-2 text-lg" variant={'ghost'}>
+              Resident
+            </Button>
+          </div>
+        </div>
+      </Overlay> */}
     </>
   )
 }
