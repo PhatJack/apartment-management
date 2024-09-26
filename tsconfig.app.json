@@ -38,6 +38,9 @@
 			"@admin/*": [
 				"./src/pages/admin/*"
 			],
+			"@user/*": [
+				"./src/pages/user/*"
+			],
 			"@types/*": [
 				"./src/types/*"
 			],

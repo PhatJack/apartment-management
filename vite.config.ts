@@ -12,6 +12,7 @@ export default defineConfig({
       '@services': path.resolve(__dirname, './src/services'),
       '@schema': path.resolve(__dirname, './src/schema'),
 			'@admin': path.resolve(__dirname, './src/pages/admin'),
+			'@user': path.resolve(__dirname, './src/pages/user'),
 			'@types': path.resolve(__dirname, './src/types'),
     },
   },

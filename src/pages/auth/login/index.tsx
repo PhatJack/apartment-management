@@ -21,8 +21,7 @@ import { useLoginMutation } from '@/features/auth/authSlice'
 import { useDocumentTitle } from 'usehooks-ts'
 
 export default function Index() {
-
-	useDocumentTitle('Login')
+  useDocumentTitle('Login')
 
   const [isShowing, setIsShowing] = useState<boolean>(false)
   const [Login, { isLoading }] = useLoginMutation()
@@ -39,13 +38,13 @@ export default function Index() {
   })
 
   const onSubmit = async (data: z.infer<typeof LoginSchema>) => {
-    await Login(data)
-      .unwrap()
-      .then((res) => {
-				console.log(res)
-			}).catch((error) => {
-				toast.error(error.message)
-			})
+    // await Login(data)
+    //   .unwrap()
+    //   .then((res) => {
+    // 		console.log(res)
+    // 	}).catch((error) => {
+    // 		toast.error(error.message)
+    // 	})
   }
 
   const onError = (error: any) => {
@@ -59,8 +58,8 @@ export default function Index() {
   }
 
   return (
-    <div className="">
-      <div className="mx-auto grid min-[400px]:w-[350px] gap-6 animate-in zoom-in-95 opacity-90">
+    <>
+      <div className="mx-auto grid min-[400px]:w-[350px] gap-6 animate-in zoom-in-90 opacity-90">
         <div className="grid gap-2 text-center">
           <h1 className="text-3xl font-bold">Login</h1>
           <p className="text-balance text-muted-foreground">
@@ -113,6 +112,13 @@ export default function Index() {
           </form>
         </Form>
       </div>
-    </div>
+      <div className="size-full fixed inset-0 bg-black/50">
+        <div className="size-full flex justify-center items-center">
+					<div className="w-[400px] h-[500px] bg-white rounded-md">
+
+					</div>
+				</div>
+      </div>
+    </>
   )
 }
