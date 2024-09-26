@@ -58,8 +58,11 @@ export default {
 					border: 'hsl(var(--info-border))',
 					foreground: 'hsl(var(--info-foreground))'
 				},
-
-
+				error: {
+					DEFAULT: 'hsl(var(--error))',
+					border: 'hsl(var(--error-border))',
+					foreground: 'hsl(var(--error-foreground))'
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

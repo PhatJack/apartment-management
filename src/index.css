@@ -42,6 +42,10 @@
 		--warning-border: 49 91% 91%;
 		--warning-foreground: 31 92% 45%;
 
+		--error: 359 100% 97%;
+		--error-border: 359 100% 94%;
+		--error-foreground: 360 100% 45%;
+
 		--info: 208 100% 97%;
 		--info-border: 221 91% 91%;
 		--info-foreground: 210 92% 45%;

@@ -55,7 +55,18 @@ const UserList = ({ users }: UserListProps) => {
                 {user.type}
               </Badge>
             </TableCell>
-            <TableCell>{user.status}</TableCell>
+            <TableCell className="uppercase">
+              <Badge
+                variant={`${
+                  user.status === 'active'
+                    ? 'success'
+                    : user.status === 'pending'
+                    ? 'warning'
+                    : 'error'
+                }`}>
+                {user.status}
+              </Badge>
+            </TableCell>
           </TableRow>
         ))}
       </TableBody>
