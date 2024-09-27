@@ -37,7 +37,7 @@ const ApartmentForm = ({ textTrigger }: ApartmentFormProps) => {
           {textTrigger}
         </Button>
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent aria-describedby={undefined}>
         <DialogHeader>
           <DialogTitle className="text-2xl">New Apartment</DialogTitle>
         </DialogHeader>
